@@ -25,11 +25,13 @@
       padding: 15px 0;
       position: sticky;
       top: 0;
+      z-index: 1000;
     }
 
     nav .container {
       display: flex;
       gap: 15px;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -61,6 +63,7 @@
     img {
       width: 100%;
       border-radius: 10px;
+      display: block;
     }
 
     iframe {
@@ -79,6 +82,18 @@
       border-radius: 8px;
       font-weight: bold;
     }
+
+    .button-link:hover {
+      opacity: 0.9;
+    }
+
+    .scratch-frame {
+      width: 100%;
+      max-width: 900px;
+      height: 520px;
+      display: block;
+      margin-top: 20px;
+    }
   </style>
 </head>
 
@@ -90,6 +105,7 @@
     <a href="#history">History</a>
     <a href="#fighters">Fighters</a>
     <a href="#analysis">Analysis</a>
+    <a href="#game">Scratch Game</a>
   </div>
 </nav>
 
@@ -112,19 +128,19 @@
   <h2>Featured Fighters (Analyzed)</h2>
 
   <div class="card">
-    <img src="Alex.jpg">
+    <img src="Alex.jpg" alt="Alex Pereira">
     <h3>Alex Pereira</h3>
     <p>Elite striker known for knockout power and precision.</p>
   </div>
 
   <div class="card">
-    <img src="Sean.jpg">
+    <img src="Sean.jpg" alt="Sean O'Malley">
     <h3>Sean O'Malley</h3>
     <p>Dynamic striker with high accuracy and creative movement.</p>
   </div>
 
   <div class="card">
-    <img src="joshua.jpg">
+    <img src="joshua.jpg" alt="Joshua Van">
     <h3>Joshua Van</h3>
     <p>High pace fighter with strong offensive output.</p>
   </div>
@@ -140,7 +156,8 @@
   <iframe 
     src="https://nbviewer.org/github/tanishchana11/KNES381-mma-final/blob/main/notebook66989ce258.ipynb"
     width="100%" 
-    height="900">
+    height="900"
+    title="Python Notebook Analysis">
   </iframe>
 
   <a class="button-link"
@@ -148,7 +165,29 @@
      target="_blank">
      View Full Notebook
   </a>
+</section>
 
+<section id="game" class="container">
+  <h2>Additional Technical Component: Scratch Game</h2>
+
+  <p>
+    This Scratch project is included as an additional logic based component. It demonstrates game design, user control, and interactive logic beyond the main Python analysis.
+  </p>
+
+  <iframe
+    class="scratch-frame"
+    src="https://scratch.mit.edu/projects/1307235323/embed"
+    allowtransparency="true"
+    scrolling="no"
+    allowfullscreen
+    title="Scratch Game">
+  </iframe>
+
+  <a class="button-link"
+     href="https://scratch.mit.edu/projects/1307235323/"
+     target="_blank">
+     Open Scratch Game
+  </a>
 </section>
 
 </body>
