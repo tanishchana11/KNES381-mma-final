@@ -1,131 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>MMA Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-  font-family: Arial;
-  background: #0b0d12;
-  color: white;
-  margin: 0;
-}
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-}
-nav {
-  background: #111;
-  padding: 15px;
-}
-nav a {
-  margin-right: 15px;
-  color: #ccc;
-}
-h1, h2 {
-  color: #f77f00;
-}
-section {
-  padding: 40px 0;
-  border-bottom: 1px solid #333;
-}
-.card {
-  background: #151922;
-  padding: 15px;
-  margin: 15px 0;
-  border-radius: 10px;
-}
-img {
-  width: 100%;
-  border-radius: 10px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MMA Portfolio</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0d12;
+      color: white;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    nav {
+      background: #111;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+    }
+
+    nav .container {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f77f00;
+    }
+
+    h1, h2, h3 {
+      color: #f77f00;
+    }
+
+    section {
+      padding: 40px 0;
+      border-bottom: 1px solid #333;
+    }
+
+    .card {
+      background: #151922;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 10px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    iframe {
+      border: none;
+      border-radius: 10px;
+      background: white;
+    }
+
+    .button-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 16px;
+      background: #f77f00;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
 
-<nav class="container">
-<a href="#home">Home</a>
-<a href="#history">History</a>
-<a href="#fighters">Fighters</a>
-<a href="#charts">Charts</a>
+<nav>
+  <div class="container">
+    <a href="#home">Home</a>
+    <a href="#history">History</a>
+    <a href="#fighters">Fighters</a>
+    <a href="#analysis">Analysis</a>
+  </div>
 </nav>
 
 <section id="home" class="container">
-<h1>Tanish Chana | MMA Performance Analysis</h1>
-<p>This website combines my interest in kinesiology, MMA, and athletic performance through data analysis.</p>
+  <h1>Tanish Chana | MMA Performance Analysis</h1>
+  <p>This website combines my interest in kinesiology, MMA, and athletic performance through data analysis.</p>
 </section>
 
 <section id="history" class="container">
-<h2>My History</h2>
-<p>Combat sports have always stood out to me because they combine discipline, conditioning, strategy, and skill.</p>
+  <h2>My History</h2>
+  <p>Combat sports have always stood out to me because they combine discipline, conditioning, strategy, and skill.</p>
 
-<div class="card">
-<h3>My Boxing</h3>
-<p>Due to file size limitations, my boxing video is not included, but it reflects my personal connection to combat sports.</p>
-</div>
+  <div class="card">
+    <h3>My Boxing</h3>
+    <p>Due to file size limitations, my boxing video is not included, but it reflects my personal connection to combat sports.</p>
+  </div>
 </section>
 
 <section id="fighters" class="container">
-<h2>My Favorite Fighters</h2>
+  <h2>Featured Fighters (Analyzed)</h2>
 
-<div class="card">
-<img src="fighters.jpg">
-<h3>Ilia Topuria</h3>
-<p>Balanced fighter with strong offense and defense.</p>
-</div>
+  <div class="card">
+    <img src="Alex.jpg">
+    <h3>Alex Pereira</h3>
+    <p>Elite striker known for knockout power and precision.</p>
+  </div>
 
-<div class="card">
-<img src="conor.jpg">
-<h3>Conor McGregor</h3>
-<p>Precision striker with excellent timing.</p>
-</div>
+  <div class="card">
+    <img src="Sean.jpg">
+    <h3>Sean O'Malley</h3>
+    <p>Dynamic striker with high accuracy and creative movement.</p>
+  </div>
 
-<div class="card">
-<img src="fighters.jpg">
-<h3>Max Holloway</h3>
-<p>Elite volume striker with relentless pace.</p>
-</div>
-
-<div class="card">
-<img src="joshua.jpg">
-<h3>Joshua Van</h3>
-<p>High output fighter with fast tempo.</p>
-</div>
-
+  <div class="card">
+    <img src="joshua.jpg">
+    <h3>Joshua Van</h3>
+    <p>High pace fighter with strong offensive output.</p>
+  </div>
 </section>
 
-<section id="charts" class="container">
-<h2>Charts</h2>
+<section id="analysis" class="container">
+  <h2>Fight Analytics (Python Notebook)</h2>
 
-<div class="card">
-<h3>Strikes Landed</h3>
-<img src="chart1.png">
-</div>
+  <p>
+    This analysis uses Python to evaluate UFC fighter performance metrics such as striking efficiency, takedown averages, and overall fight statistics. The charts below are generated dynamically, meaning they update automatically when the dataset changes.
+  </p>
 
-<div class="card">
-<h3>Strikes Absorbed</h3>
-<img src="chart2.png">
-</div>
-
-<div class="card">
-<h3>Wrestling Profile</h3>
-<img src="chart3.png">
-</div>
-
-</section>
-<h2>Fight Analytics (Python Notebook)</h2>
-
-<p>
-This notebook analyzes UFC fighter performance using Python. The charts below are generated dynamically from real data.
-</p>
-
-<iframe 
+  <iframe 
     src="https://nbviewer.org/github/tanishchana11/KNES381-mma-final/blob/main/notebook66989ce258.ipynb"
     width="100%" 
-    height="900px">
-</iframe>
+    height="900">
+  </iframe>
+
+  <a class="button-link"
+     href="https://nbviewer.org/github/tanishchana11/KNES381-mma-final/blob/main/notebook66989ce258.ipynb"
+     target="_blank">
+     View Full Notebook
+  </a>
+
+</section>
+
 </body>
 </html>
-EOF
